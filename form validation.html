@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+        <h3>Please fill out this mandatory entrance form to procede</h3>
+        <form name="myForm" onsubmit="validateForm()">
+          Name:  <input type="text" name="name">
+          <input type="submit" value="submit">
+          <p id="alert"></p>
+          <script>
+            function validateForm(){
+                var x =document.forms["myForm"]["name"].value;
+                if (x==""){
+                    alert("Name is a required answer");
+                    return false;
+                }
+            }
+          </script>
+        </form>
+    </body>
+</html>
